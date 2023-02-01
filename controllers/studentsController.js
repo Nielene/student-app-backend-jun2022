@@ -30,7 +30,7 @@ controller.get("/:id", (request, response) => {
       return student.id === studentId;
     });
     //   response.json(studentData.students.id);
-    console.log(singleStudent);
+    // console.log(singleStudent);
 
     if (singleStudent) {
       response.json(singleStudent);
