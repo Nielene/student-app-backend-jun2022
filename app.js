@@ -8,7 +8,7 @@ const app = express();
 
 // set up routes/controllers; same name as the variable itself:
 const studentsController = require("./controllers/studentsController");
-const namesController = require(".controllers/namesController");
+const namesController = require("./controllers/namesController");
 
 // when s'thing goes to /9000/student app, use studentController
 app.use("/students", studentsController);

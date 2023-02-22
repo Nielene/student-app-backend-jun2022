@@ -1,7 +1,25 @@
 const express = require("express");
 const controller = express.Router();
 
-const repeatNTimesWithSpace = require("../utils/stringUtils");
+const {
+  repeatNTimesWithSpace, capitalizeFirstLetter} = require("../utils/stringUtils");
+
+controller.get("/capitalizeName/:name", (request, response) => {
+  try {
+    // get name
+    const name = request.params.name;
+    console.log(name);
+
+    // get result of repeatNTimesWithSpace
+    const capitalizeName = capitalizeFirstLetter(name);
+
+    // send string response of result
+    response.send(capitalizeName);
+
+  } catch (err) {
+    response.send("There was an error.");
+  }
+});
 
 controller.get("/:name/:times", (request, response) => {
   try {
@@ -15,6 +33,7 @@ controller.get("/:name/:times", (request, response) => {
 
     // send string response of result
     response.send(repeatedNames);
+
   } catch (err) {
     response.send("There was an error.");
   }
