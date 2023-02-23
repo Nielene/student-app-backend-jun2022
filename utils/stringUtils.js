@@ -3,6 +3,7 @@
 // with a space in the middle of each time.
 
 function repeatNTimesWithSpace(string, n) {
+  if(!string) return '';
   return (string + " ").repeat(n);
 }
 
