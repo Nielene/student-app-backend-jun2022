@@ -2,8 +2,10 @@ const {repeatNTimesWithSpace, capitalizeFirstLetter} = require ('./stringUtils')
 
 // this is a utit test; later will do integrated tests
 // using " , () => {} " - familiar from axios or callbacks
-// install a Dev dependency -D testing libray: Jest; npm install -D jest
+// install a Dev dependency -D testing libray: Jest; 'npm install -D jest'
 // in package.json: when "npm run test", jest will be run instead.
+// can use: 'npm run test stringUtils' to specify which file (part of project) we want to test
+
 describe ("take a string and a number, and repeat string same number of times separated by spaces.", () => {
 
     it("handles an empty string", () => {
